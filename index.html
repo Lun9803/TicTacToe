@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+    </head>
+    <body>
+        <div id="main-page">
+            <span id="message"></span>
+            <button>Start</button>
+            <button>About</button>
+            <!--the option page, initially invisible until start button is clicked-->
+            <div id="option">
+                <!--user can either choose PvP or PvE-->
+                <div id="mode-select">
+                    <button>PvE</button>
+                    <button>PvP</button>
+                </div>
+                <!--if user chooses PvE, the difficulty selector will pop up-->
+                <div id="difficulty-select">
+                    <button>Easy</button>
+                    <button>Normal</button>
+                    <button>Hard</button>
+                </div>
+                <button id="back">Back</button>
+            </div>
+        </div>
+
+        <!--the game board-->
+        <div id="game-board">
+
+        </div>
+
+        <!--the AI JS file includes the behaviours of computer player-->
+        <script src="AI.js"></script>
+        <script> src="index.js"</script>
+    </body>
+</html>
