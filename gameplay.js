@@ -11,6 +11,7 @@ let board = [
     ["none", "none", "none"]
 ]
 
+// movement
 function select(grid){
     if(gameEnd)return;
 
@@ -61,7 +62,7 @@ function printEndMessage(){
     }
 }
 
-
+// check if anyone wins after each round
 function checkResult(){
     // check for each row
     for(let i=0; i<3; i++){
@@ -109,6 +110,7 @@ function checkResult(){
     // alert(wins);
 }
 
+// hide the main menu and brings up game board
 function showGameBoard(){
     document.getElementById("main-page").style.display="none";
     document.getElementById("game-board").style.display="block";
@@ -134,6 +136,7 @@ function showGameBoard(){
     // alert(difficulty);
 }
 
-
-
+function restart(){
+    location.reload();
+}
 

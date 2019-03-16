@@ -21,6 +21,8 @@ function showModeSelect(){
 }
 
 function pve(){
+    alert("under development");
+    return;
     document.getElementById("mode-select").style.display="none";
     document.getElementById("difficulty-select").style.display="block";
     currentPage = "difficulty-select";
