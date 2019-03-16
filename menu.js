@@ -1,6 +1,3 @@
-// the value of mode can be either "pve" or "pvp"
-let mode;
-let difficulty;
 // currentPage can be either game-board, difficulty-selector, mode-selector or main.
 let currentPage;
 
@@ -21,11 +18,6 @@ function showModeSelect(){
     document.getElementById("mode-select").style.display="block";
     document.getElementById("back").style.display="block";
     currentPage = "mode-select";
-}
-
-function showGameBoard(){
-    document.getElementById("main-page").style.display="none";
-    document.getElementById("game-board").style.display="block";
 }
 
 function pve(){
