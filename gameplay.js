@@ -1,5 +1,4 @@
 let crossTurn = true;
-let difficulty = undefined;
 let mode = undefined;
 let winner = undefined;
 let gameEnd = false;
@@ -33,16 +32,18 @@ function select(grid){
         }
         crossTurn = !crossTurn;
         inGameMessage.innerHTML=crossTurn?"x":"o";
+        checkResult();
     }
 
     // operations for pve
     else{
         grid.style.backgroundImage="url('img/cross.JPG')";
         board[x][y] = "x";
-        //AIplay();
+        checkResult();
+        if(!gameEnd)AIplay();
     }
 
-    checkResult();
+    
     if(gameEnd){
         printEndMessage();
     }
@@ -116,7 +117,7 @@ function showGameBoard(){
     document.getElementById("game-board").style.display="block";
     inGameMessage = document.getElementById("game-message");
     
-    if(mode=="pve")inGameMessage.innerHTML="Your turn";
+    if(mode=="pve")inGameMessage.innerHTML="AI level: " + difficulty;
     else{
         if(crossTurn)inGameMessage.innerHTML="x";
         else{
