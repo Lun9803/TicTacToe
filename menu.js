@@ -1,10 +1,8 @@
 // currentPage can be either game-board, difficulty-selector, mode-selector or main.
 let currentPage;
 
-
 function showMainPage(){
     document.getElementById("start").style.display="block";
-    document.getElementById("about").style.display="block";
     document.getElementById("mode-select").style.display="none";
     document.getElementById("difficulty-select").style.display="none";
     document.getElementById("back").style.display="none";
@@ -13,7 +11,6 @@ function showMainPage(){
 
 function showModeSelect(){
     document.getElementById("start").style.display="none";
-    document.getElementById("about").style.display="none";
     document.getElementById("difficulty-select").style.display="none";
     document.getElementById("mode-select").style.display="block";
     document.getElementById("back").style.display="block";
