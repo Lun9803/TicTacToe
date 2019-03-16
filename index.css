@@ -1,0 +1,69 @@
+body{
+    font-family: fantasy;
+    font-size: 250%;
+    color: rgb(212, 212, 212);
+    letter-spacing: 3px;
+    background-color: black; 
+}
+
+#main-page{
+    margin-top:100px;
+}
+
+button{
+    display: block;
+    width: 25%;
+    height: 50px;
+    margin: 5% auto;
+    font-family: fantasy;
+    font-size: 20px;
+    letter-spacing: 5px;
+    background-color: rgb(212, 212, 212);
+    border-color: rgb(212, 212, 212);
+    border-radius: 15px;
+    outline: none;
+}
+
+#message{
+    display: block;
+    margin-bottom: 80px;
+}
+
+#start, #about{
+}
+
+#mode-select{
+    display: none;
+}
+
+#difficulty-select{
+    display: none;
+}
+
+#back{
+    display: none;
+    margin-top: 10%;
+    height: 30px;
+    background-color: darkgrey;
+}
+
+#game-board{
+    margin-top: 80px;
+    display: none;
+}
+
+table{
+    height:300px;
+    margin-top: 70px;
+    width:40%
+}
+
+table, td{
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+}
+
+td:hover{
+    cursor: pointer;
+}

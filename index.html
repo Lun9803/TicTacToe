@@ -2,36 +2,55 @@
 <html>
     <head>
         <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div id="main-page">
-            <span id="message"></span>
-            <button>Start</button>
-            <button>About</button>
+        <div id="main-page" align=center>
+            <span id="message">Welcome to TicTacToe!</span>
+            <button id="start" onclick=showModeSelect()>Start</button>
+            <button id="about">About</button>
             <!--the option page, initially invisible until start button is clicked-->
             <div id="option">
                 <!--user can either choose PvP or PvE-->
                 <div id="mode-select">
-                    <button>PvE</button>
-                    <button>PvP</button>
+                    <button onclick=pve()>PvE</button>
+                    <button onclick=pvp()>PvP</button>
                 </div>
                 <!--if user chooses PvE, the difficulty selector will pop up-->
                 <div id="difficulty-select">
-                    <button>Easy</button>
-                    <button>Normal</button>
-                    <button>Hard</button>
+                    <button onclick=setDifficulty(this)>Easy</button>
+                    <button onclick=setDifficulty(this)>Normal</button>
+                    <button onclick=setDifficulty(this)>Hard</button>
                 </div>
-                <button id="back">Back</button>
+                <button id="back" onclick=back()>Back</button>
             </div>
         </div>
 
         <!--the game board-->
-        <div id="game-board">
-
+        <div id="game-board" align=center>
+            <span>Current: </span>
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
 
         <!--the AI JS file includes the behaviours of computer player-->
         <script src="AI.js"></script>
-        <script> src="index.js"</script>
+        <script src="menu.js"> </script>
+        <script src="gameplay.js"></script>
     </body>
 </html>
