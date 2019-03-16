@@ -39,11 +39,10 @@ function select(grid){
     else{
         grid.style.backgroundImage="url('img/cross.JPG')";
         board[x][y] = "x";
-        checkResult();
-        if(!gameEnd)AIplay();
+        AIplay();
     }
 
-    
+    checkResult();
     if(gameEnd){
         printEndMessage();
     }

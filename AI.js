@@ -2,6 +2,15 @@ let difficulty = undefined;
 
 
 function AIplay(){
+    // check if there is space  
+    let hasNone = false;
+    for(let i=0; i<3; i++){
+        for(let j=0; j<3; j++){
+            if(board[i][j]=="none")hasNone=true;
+        }
+    }
+    if(!hasNone)return;
+
     if(difficulty=="easy"){
         easyMode();
     }
