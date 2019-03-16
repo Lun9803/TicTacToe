@@ -32,14 +32,15 @@ function select(grid){
         }
         crossTurn = !crossTurn;
         inGameMessage.innerHTML=crossTurn?"x":"o";
-        checkResult();
     }
 
     // operations for pve
     else{
-        grid.style.backgroundImage="url('img/cross.JPG')";
-        board[x][y] = "x";
-        AIplay();
+        grid.style.backgroundImage=crossTurn?"url('img/cross.JPG')":"url('img/circle.JPG')";
+        board[x][y] = crossTurn?"x":"o";
+        crossTurn = !crossTurn;
+        checkResult();
+        if(!gameEnd)AIplay();
     }
 
     checkResult();
@@ -134,6 +135,13 @@ function showGameBoard(){
     }
     // alert(mode);
     // alert(difficulty);
+
+    if(mode=="pve"){
+        if(2*Math.random()>1){
+            AIplay();
+        }
+    }
+
 }
 
 function restart(){

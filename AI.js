@@ -22,9 +22,11 @@ function easyMode(){
         let x = Math.floor(3*Math.random());
         let y = Math.floor(3*Math.random());
         if(board[x][y]=="none"){
-            board[x][y]="o";
+            board[x][y]=crossTurn?"x":"o";
             let index = x*3+y;
-            document.getElementById(String(index)).style.backgroundImage="url('img/circle.JPG')";
+            let grid = document.getElementById(String(index))
+            grid.style.backgroundImage=crossTurn?"url('img/cross.JPG')":"url('img/circle.JPG')";
+            crossTurn = !crossTurn;
             return;
         }
     }

@@ -34,9 +34,13 @@ function setDifficulty(e){
         difficulty = "easy";
     }
     else if(e.innerHTML=="Normal"){
+        alert("under development");
+        return;
         difficulty = "normal";
     }
     else{
+        alert("under development");
+        return;
         difficulty = "hard";
     }
     // alert(difficulty);
